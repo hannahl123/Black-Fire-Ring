@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Black Fire</title>
+    <meta name="description" content="Starter A-Frame Project" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!-- Add images here | Placer des images ici-->
+        <!--Background image by/par photoguy 2005 from Flickr-->
+        <img
+          id="background"
+          src="https://cdn.glitch.com/cb726509-c7df-4b0f-8f77-cd8c33feee7b%2Froom.jpg?v=1626199893271"
+        />
+        <!--Concrete texture by/par Kyden from Flickr-->
+        <img
+          id="green"
+          src="https://cdn.glitch.com/1368ed30-f950-4880-8cbd-2568c447316f%2Fgreen-texture.jpg?v=1542242223318"
+        />
+        <img
+          id="brick"
+          src="https://cdn.glitch.com/1368ed30-f950-4880-8cbd-2568c447316f%2Fbrick-texture.jpg?v=1542242223284"
+        />
+        <img
+          id="blue"
+          src="https://cdn.glitch.com/1368ed30-f950-4880-8cbd-2568c447316f%2Fblue-texture.jpg?v=1542242223232"
+        />
+        <img
+          id="fire"
+          src="https://cdn.glitch.com/1368ed30-f950-4880-8cbd-2568c447316f%2Forange-texture.jpg?v=1542242223165"
+        />
+      </a-assets>
+      <a-sphere
+        src="#fire"
+        position="0 1.5 -0.5"
+        radius="0.2"
+        shadow
+        animation="property: position; to: -1 1.5 -3; dir: alternate; dur: 2000; easing: linear; loop: true;"
+      ></a-sphere>
+      <a-box src="#green" position="0 1.5 1" height="0.3" width="0.3"></a-box>
+      <a-ring
+        src="#fire"
+        position="-0.25 1.5 -1"
+        radius-inner="0.25"
+        radius-outer="0.5"
+        animation="property: rotation; dir: alternate; dur: 2000; easing: linear; loop: true; to: 60 -60 60;"
+      ></a-ring>
+      <a-plane
+        position="0 1 0"
+        rotation="-90 0 0"
+        width="4"
+        height="4"
+        src="#fire"
+        shadow
+      ></a-plane>
+      <a-sky src="#background"></a-sky>
+    </a-scene>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
